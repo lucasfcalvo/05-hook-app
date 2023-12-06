@@ -1,6 +1,6 @@
 import { useLayoutEffect, useRef, useState } from "react";
-
-export const Character = ({ name, image, actor }) => {
+ 
+export const Character = ({ name, image, actor, id }) => {
   const pRef = useRef();
   const [boxSize, setBoxSize] = useState({ width: 0, height: 0 });
   useLayoutEffect(() => {
@@ -9,7 +9,7 @@ export const Character = ({ name, image, actor }) => {
     // console.log(boxSize)
     // setBoxSize({ name, actor });
     setBoxSize({ width, height });
-  }, [image]);
+  }, [id]);
   return (
     <>
       <blockquote ref={pRef}className="blockquote text-end">
