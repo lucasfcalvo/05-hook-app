@@ -5,10 +5,17 @@ import { FormWithCustomHook } from "./02-useEffect/FormWithCustomHook";
 import { MultipleCustomHooks } from "./03-examples/MultipleCustomHooks";
 import { FocusScreen } from "./04-useRef/FocusScreen";
 import { Layout } from "./05-useLayoutEffect/Layout";
+import { Memorize } from "./06-usememos/Memorize";
+import { MemoHook } from "./06-usememos/MemoHook";
+import { CallbackHook } from "./06-usememos/CallbackHook";
+import { Padre } from "./07-tarea-memo/Padre";
 
 export const HooksApp = () => {
   return (
-    <>
+    <><Padre/>
+    <CallbackHook/>
+    <MemoHook/>
+    <Memorize/>
       <Layout />
       <FocusScreen />
       <MultipleCustomHooks />
